@@ -44,4 +44,23 @@ function alertPic(){
 		//$(".code").css("display","none");
 		$(".code").fadeOut();
 	})
+	$(".content img").mouseover(function(){
+		$(this).siblings(".anm").css("display","block");
+		//$(this).siblings(".anm").fadeIn(1000);
+		$(this).siblings(".anm").animate({"marginLeft":"-100px"},"slow");
+	});
+	$(".content img").mouseout(function(){
+		
+		$(this).siblings(".anm").animate({"marginLeft":"0px"},"slow");
+		//$(this).siblings(".anm").css("display","none");
+		$(this).siblings(".anm").fadeOut();
+		
+	})
+}
+
+function contentList(){
+	$(".content ul li").click(function(){
+		var str=$(this).attr("str");
+		window.location.href="file:///E:/gittest/owner/-DreamerZYY.github.io/content.html#"+str;
+	})
 }
